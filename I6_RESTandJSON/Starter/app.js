@@ -36,8 +36,16 @@ app.post('/personjson', jsonParser, function(req, res) {
 	console.log(req.body.lastname);
 });
 
-app.get('/api', function(req, res) {
-	res.json({ firstname: 'John', lastname: 'Doe' });
+app.get('/api/person:id', function(req, res) {
+	// get from database
+});
+
+app.post('/api/person/', jsonParser, function(req, res) {
+    // save database
+});
+
+app.delete('/api/person:id', function(req, res) {
+    // delete from database
 });
 
 app.listen(port);
